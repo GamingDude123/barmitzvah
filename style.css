@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgb(226, 226, 226);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* -------------- NavBar -------------- */
+
+nav{
+    width: 100vw;
+    height: 75px; /*change to 55*/
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(5, 45, 68);
+    
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+
+
+}
+
+
+nav ul{
+    
+    padding : 0px 40px;
+    width: inherit;
+    list-style : none;
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  
+nav ul li{
+    /*border  : solid 1px black;*/
+    margin: 0px 27px;
+    font-size: 18px; /*change to 16*/
+  }
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(243, 243, 243);
+}
+
+.active{
+    text-decoration: underline; 
+    text-underline-offset: 6px !important ;
+    text-decoration-thickness: 2px;
+}
+
+/* ----------- Welcome Page --------------- */  
+
+.welcome{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 75px;
+    background-image: linear-gradient(180deg, rgb(202, 214, 206), rgb(8, 84, 128));
+}
+
+
+
+.overlay{
+    height: inherit;
+    width: inherit;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: 75px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+.overlay h1{
+    position: relative;
+    top: -40px;
+    font-size: 42px;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
+
+.overlay p{
+    position: relative;
+    top: -50px;
+    font-size: 15px;
+    text-shadow: 2px 2px 2px black;
+    text-align: center; 
+    padding: 0 50px;
+}
+
+#btn{
+    background-color: rgba(0, 0, 0, 0.596);
+    border: 2.5px solid white;
+    border-radius: 5px;
+    color: rgb(245, 245, 245);
+    font-size: 1.2rem;
+    padding: .3rem 1.0rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-family: 'Poppins';
+    position: relative;
+    top: -40px;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    background-color: rgb(126, 126, 126) !important;
+    transform: translate(2px, 2px);  
+}
+
+button:active{
+    transform: translate(3px, 3px); 
+}
+
+/* ----------- Torah Portion -----------*/
+
+.torahPortion{
+    overflow: hidden;
+    width: 100vw;
+    /*height: 100vh;*/
+    margin-top: 75px;
+    
+}
+.torahPortion h1{
+    margin-left: 10vw;
+    color: rgb(5, 45, 68);
+}
+
+#torahImg{
+    float: right;
+    height: 40vh;
+    margin-right: 10vw;
+    padding: 0 5vw 1vw 5vw;
+   
+}
+
+.torahPortion p {
+    margin: 0 10vw;
+    text-align: justify;
+}
+
+
+/* -------------- About Me -----------------*/
+
+.about{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 75px;
+    border: 1px solid green;
+}
+.about h1{
+    margin-left: 10vw;
+    color: rgb(5, 45, 68);
+}
+
+#aboutImg{
+    float: left;
+    height: 40vh;
+    margin-left: 10vw;
+    padding: 0 5vw 1vw 5vw;
+}
+
+.about p {
+    margin: 0 10vw;
+    text-align: justify;
+}
+
+/* -------------- MY FAMILY ---------*/
+.myFamily{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 75px;
+    border: 1px solid green;
+}
+.myFamily h1{
+    margin-left: 10vw;
+    color: rgb(5, 45, 68);
+}
+
+#familyImg{
+    float: right;
+    height: 40vh;
+    margin-right: 10vw;
+    padding: 0 5vw 1vw 5vw;
+}
+
+.myFamily p {
+    margin: 0 10vw;
+    text-align: justify;
+}
+
+
+/* -------------- Carousel ------------*/
+
+.carousel {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    height: 50vw;
+    width: 75vw;
+}
+
+.image-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.image-container img {
+    object-fit: cover;
+    height: 50vw;
+    width: 75vw;
+}
